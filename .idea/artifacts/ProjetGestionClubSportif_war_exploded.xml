@@ -8,7 +8,7 @@
           <element id="module-output" name="ProjetGestionClubSportif" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="mysql-connector-java-5.1.44-bin" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.21-bin" />
           <element id="library" level="project" name="jstl-1.2" />
         </element>
       </element>
