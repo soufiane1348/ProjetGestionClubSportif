@@ -10,10 +10,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <%@ page pageEncoding="UTF-8" %>
-<a href="logout.jsp">Se déconnecter</a> | <jsp:include page="club_form.html"></jsp:include>
+<a href="logout.jsp"><i class="material-icons">&#xe897;</i></a><br> | <jsp:include page="club_form.html"></jsp:include>
 
 </body>
 </html>
