@@ -1,0 +1,32 @@
+/* Image de la page d'accueil centrer */
+
+img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Pour le tableau dans l'aperçu */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+    text-align: center;
+}
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+
+}
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+
+}
