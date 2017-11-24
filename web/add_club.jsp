@@ -23,6 +23,7 @@
 <jsp:useBean id="u" class="com.java.classe.Club"></jsp:useBean>
 <jsp:setProperty property="*" name="u"/>
 
+
 <%
     int i= ClubBD.save(u);
     if(i>0){

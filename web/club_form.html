@@ -4,19 +4,32 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports</title>
-</head>
+    <link href="css/header.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+<header>
+    <a href="logout.jsp"><i class="material-icons">&#xe897;</i></a>
+    <a href="welcome.jsp"><i class="material-icons">&#xE88A;</i></a><br>
+
+
+</header>
+
 <body>
 
-
-<a href="vue_club.jsp">Apercu des clubs</a><br/>
+<h4 class="bas">
+    <a href="vue_club.jsp">Cliquez ici pour afficher les enregistrements</a>
+</h4>
 
 <h2>Ajouter un nouveau club</h2>
+
 <form action="add_club.jsp" method="post">
     <table>
-        <tr><td>Club:</td><td><input type="text" name="club_nom"/></td></tr>
+        <tr><td>Club:</td><td><input type="text" name="club_Nom"/></td></tr>
 
         <tr><td>Type:</td><td>
-            <select name="club_type" style="width:155px">
+            <select name="club_Type" style="width:155px">
                 <option>Volley-Ball</option>
                 <option>Hand-Ball</option>
                 <option>Rugby</option>
@@ -24,9 +37,10 @@
                 <option>Autres</option>
             </select>
         </td></tr>
-        <tr><td colspan="2"><input type="submit" value="Ajouter"/></td></tr>
+        <tr><td colspan="2"><input class="button" type="submit" value="Ajouter"/></td></tr>
     </table>
 </form>
 
+</head>
 </body>
 </html>

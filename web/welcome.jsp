@@ -13,18 +13,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link href="css/header.css" type="text/css" rel="stylesheet">
+
+
+
+<header>
+    <a href="logout.jsp"><i class="material-icons">&#xe897;</i></a><br>
+</header>
+
 <body>
-
-
-<a href="logout.jsp"><i class="material-icons">&#xe897;</i></a><br>
-<h2>Page d'accueil</h2>
+<br><br><br><br><br><br>
 
 <br>
-<a href="add_club-form.jsp">Ajouter un club</a>   | <a href="vue_club.jsp">Consulter la liste des clubs</a>
-<br><br>
 
-<a href="#">Ajouter un membre</a> | <a href="#">Consulter la liste des membres</a>
+<h3 class="haut">
+    <a href="add_club-form.jsp">Ajouter un club</a> | <a href="vue_club.jsp">Consulter la liste des clubs</a> |
+    <a href="#">Ajouter un membre</a> | <a href="#">Consulter la liste des membres</a>
+</h3>
+<img src="images/logo1.jpg" alt="myImage" width="300" height="300">
 
+</head>
 </body>
 </html>

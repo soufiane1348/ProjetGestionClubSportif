@@ -1,4 +1,7 @@
+
+
 /* Image de la page d'accueil centrer */
+
 
 img {
     border-radius: 50%;
@@ -6,6 +9,10 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* bandeau */
+
+
 
 
 /* Pour le tableau dans l'aperçu */

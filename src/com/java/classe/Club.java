@@ -1,30 +1,30 @@
 package com.java.classe;
 
 public class Club {
-    private int pk_club;
-    private String club_nom,club_type;
+    private int PK_Club;
+    private String Club_Nom,Club_Type;
 
-    public void setPk_club(int pk_club) {
-        this.pk_club = pk_club;
+    public void setPK_Club(int PK_Club) {
+        this.PK_Club = PK_Club;
     }
 
-    public void setClub_nom(String club_nom) {
-        this.club_nom = club_nom;
+    public void setClub_Nom(String club_Nom) {
+        Club_Nom = club_Nom;
     }
 
-    public void setClub_type(String club_type) {
-        this.club_type = club_type;
+    public void setClub_Type(String club_Type) {
+        Club_Type = club_Type;
     }
 
-    public int getPk_club() {
-        return pk_club;
+    public int getPK_Club() {
+        return PK_Club;
     }
 
-    public String getClub_nom() {
-        return club_nom;
+    public String getClub_Nom() {
+        return Club_Nom;
     }
 
-    public String getClub_type() {
-        return club_type;
+    public String getClub_Type() {
+        return Club_Type;
     }
 }

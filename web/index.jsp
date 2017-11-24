@@ -10,9 +10,7 @@
 <head>
   <title>Palais des Sports</title>
   <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
-  <style>
 
-  </style>
 </head>
 <body><br><br><br><br>
 <center><h1>Page de connexion</h1></center>

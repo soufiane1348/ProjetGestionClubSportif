@@ -11,23 +11,33 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/tableau.css" type="text/css" rel="stylesheet">
+    <link href="css/listeclub.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-</head>
+
+
+<header>
+    <a href="logout.jsp"><i class="material-icons">&#xe897;</i></a>
+    <a href="welcome.jsp"><i class="material-icons">&#xE88A;</i></a><br>
+</header>
 <body>
+
 
 <%@page import="com.java.bd.ClubBD,com.java.classe.*,java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page pageEncoding="UTF-8" %>
 
-<a href="logout.jsp">Se déconnecter</a><br>
+<br><br><br><br>
 <h1>Liste des clubs</h1>
 
 <%
     List<Club> list= ClubBD.getAllRecords();
     request.setAttribute("list",list);
 %>
+<p>Ajouter une nouvelle entrée <a href="add_club-form.jsp"><i class="fa">&#xf0fe;</i></a></p>
 
 <table>
         <thead>
@@ -37,16 +47,16 @@
         </tr>
         </thead>
     <c:forEach items="${list}" var="u">
-        <tr><td>${u.getPk_club()}</td><td>${u.getClub_nom()}</td>
-            <td>${u.getClub_type()}</td>
-            <td><a href="edit_form_club.jsp?pk_club=${u.getPk_club()}">Editer</a></td>
-            <td><a href="delete_club.jsp?pk_club=${u.getPk_club()}">Supprimer</a></td></tr>
+        <tr><td>${u.getPK_Club()}</td><td>${u.getClub_Nom()}</td>
+            <td>${u.getClub_Type()}</td>
+            <td><a href="edit_form_club.jsp?pk_club=${u.getPK_Club()}"><i class="fa fa-edit"></i></a></td>
+            <td><a href="delete_club.jsp?PK_Club=${u.getPK_Club()}"><i class="fa fa-trash-o"></i></a></td></tr>
 
 
     </c:forEach>
 </table>
 
-<br/><a href="add_club-form.jsp">Ajouter un nouveau club</a>
-
+<p>Ajouter une nouvelle entrée <a href="add_club-form.jsp"><i class="fa">&#xf0fe;</i></a></p>
+</head>
 </body>
 </html>

@@ -21,11 +21,11 @@
 
 <h1>Editer Formulaire</h1>
 <form action="edit_club.jsp" method="post">
-    <input type="hidden" name="pk_club" value="<%=u.getPk_club() %>"/>
+    <input type="hidden" name="PK_Club" value="<%=u.getPK_Club() %>"/>
     <table>
-        <tr><td>Nom:</td><td><input type="text" name="club_nom" value="<%= u.getClub_nom()%>"/></td></tr>
+        <tr><td>Nom:</td><td><input type="text" name="club_Nom" value="<%= u.getClub_Nom()%>"/></td></tr>
         <tr><td>Type:</td><td>
-            <select name="club_type">
+            <select name="club_Type">
                 <option>Volley-Ball</option>
                 <option>Hand-Ball</option>
                 <option>Rugby</option>
