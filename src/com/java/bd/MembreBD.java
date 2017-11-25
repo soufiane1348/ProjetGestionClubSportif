@@ -20,6 +20,19 @@ public class MembreBD {
         return con;
     }
 
+    public static int delete(Membre u){
+        int status=0;
+        try{
+            Connection con=getConnection();
+            PreparedStatement ps=con.prepareStatement("delete from membres where PK_Membre=?");
+            ps.setInt(1,u.getPK_Membre());
+            status=ps.executeUpdate();
+        }catch(Exception e){System.out.println(e);}
+
+        return status;
+    }
+
+
     public static int save(Membre u) {
         int status = 0;
         try {

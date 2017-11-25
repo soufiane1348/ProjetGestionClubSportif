@@ -27,6 +27,7 @@
         <tr><td>Prenom:</td><td><input type="text" name="membre_Prenom" value="<%= u.getMembre_Prenom()%>"/></td></tr>
         <tr><td>Date Naissance:</td><td><input type="text" name="membre_DateNaissance" value="<%= u.getMembre_DateNaissance()%>"/></td></tr>
         <tr><td>Fk Club:</td><td><input type="text" name="FK_Club" value="<%= u.getFK_Club()%>"/></td></tr>
+
         <tr><td colspan="2"><input type="submit" value="Editer"/></td></tr>
     </table>
 </form>
