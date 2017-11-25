@@ -14,7 +14,7 @@
 </head>
 <body>
 <%@ page pageEncoding="UTF-8" %>
-<a href="logout.jsp"><br> </a>| <jsp:include page="club_form.html"></jsp:include>
+ <jsp:include page="club_form.html"></jsp:include>
 
 </body>
 </html>

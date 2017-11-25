@@ -28,7 +28,7 @@
 
 <h3 class="haut">
     <a href="add_club-form.jsp">Ajouter un club</a> | <a href="vue_club.jsp">Consulter la liste des clubs</a> |
-    <a href="#">Ajouter un membre</a> | <a href="#">Consulter la liste des membres</a>
+    <a href="add_membre_form.jsp">Ajouter un membre</a> | <a href="vue_membre.jsp">Consulter la liste des membres</a>
 </h3>
 <img src="images/logo1.jpg" alt="myImage" width="300" height="300">
 
