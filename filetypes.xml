@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping pattern="todoAtjsp" type="PLAIN_TEXT" />
+      <mapping ext="eot" type="ThymeleafExpressions" />
     </extensionMap>
   </component>
 </application>
