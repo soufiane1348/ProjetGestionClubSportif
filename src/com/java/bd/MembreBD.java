@@ -1,5 +1,6 @@
 package com.java.bd;
 import java.sql.*;
+import java.time.Clock;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +11,14 @@ import static javax.swing.DropMode.ON;
 public class MembreBD {
 
     public static Connection getConnection() {
+
+
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdd", "root", "");
+
+
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -67,25 +72,44 @@ public class MembreBD {
     }
 
     public static List<Membre> getAllRecords() {
-        List<Membre> list = new ArrayList<Membre>();
+        List<Membre> listMembre = new ArrayList<Membre>();
 
         try {
-            Connection con = getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Membres");
-            ResultSet rs = ps.executeQuery();
+             Connection con = getConnection();
+            Statement state = con.createStatement();
+            System.out.println("mon test n  "+state);
+            //PreparedStatement ps = con.prepareStatement("select * from Membres m, clubs c where m.FK_Club=c.PK_Club");
+
+            // intefration de on inner join.
+
+            String query = "SELECT Membres.PK_Membre,Membres.Membre_Nom,Membres.Membre_Prenom,Membres.Membre_DateNaissance, Clubs.PK_Club as FK_Club,";
+            query += "Clubs.Club_Nom, Clubs.Club_Type FROM Membres inner join Clubs on(Membres.FK_Club=Clubs.PK_Club) ";
+            System.out.println("avant requette  ");
+            ResultSet rs = state.executeQuery(query);
+
+            System.out.println("mon rs est egal null   "+rs);
+            //ResultSet rs = ps.executeQuery();
             while (rs.next()) {
+
                 Membre u = new Membre();
-                u.setPK_Membre(rs.getInt("PK_Membre"));
-                u.setMembre_Nom(rs.getString("membre_Nom"));
-                u.setMembre_Prenom(rs.getString("membre_Prenom"));
-                u.setMembre_DateNaissance(rs.getString("membre_DateNaissance"));
-                u.setFK_Club(rs.getInt("FK_Club"));
-                list.add(u);
+
+                System.out.println("mon test 2 " + rs.getString("Clubs.Club_Nom"));
+                u.setPK_Membre(rs.getInt("Membres.PK_Membre"));
+                u.setMembre_Nom(rs.getString("Membres.membre_Nom"));
+                u.setMembre_Prenom(rs.getString("Membres.membre_Prenom"));
+                u.setMembre_DateNaissance(rs.getString("Membres.membre_DateNaissance"));
+                u.setNomClub(rs.getString("Clubs.Club_Nom"));
+
+                listMembre.add(u);
+
             }
+
         } catch (Exception e) {
             System.out.println(e);
         }
-        return list;
+
+
+        return listMembre;
     }
 
     public static Membre getRecordById(int PK_Membre){
@@ -102,12 +126,11 @@ public class MembreBD {
                 u.setMembre_Prenom(rs.getString("membre_Prenom"));
                 u.setMembre_DateNaissance(rs.getString("membre_DateNaissance"));
                 u.setFK_Club(rs.getInt("FK_Club"));
+
             }
         }catch(Exception e){System.out.println(e);}
         return u;
     }
-
-
 
 }
 
