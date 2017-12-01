@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
 <%@ page pageEncoding="UTF-8" %>
+
 <jsp:include page="membre_form.html"></jsp:include>
 
 </body>

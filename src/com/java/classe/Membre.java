@@ -1,8 +1,31 @@
 package com.java.classe;
 
 public class Membre {
-    private int PK_Membre, FK_Club;
-    private String Membre_Nom, Membre_Prenom, Membre_DateNaissance;
+    private int PK_Membre;
+    private int FK_Club;
+    private String Membre_Nom;
+    private String Membre_Prenom;
+    private String Membre_DateNaissance;
+    private String nomClub;
+
+
+
+
+    public int getPK_Membre() {
+        return PK_Membre;
+    }
+
+    public int getFK_Club() {
+        return FK_Club;
+    }
+
+    public String getMembre_Nom() {
+        return Membre_Nom;
+    }
+
+    public String getMembre_Prenom() {
+        return Membre_Prenom;
+    }
 
 
     public void setPK_Membre(int PK_Membre) {
@@ -25,23 +48,15 @@ public class Membre {
         Membre_DateNaissance = membre_DateNaissance;
     }
 
-    public int getPK_Membre() {
-        return PK_Membre;
-    }
-
-    public int getFK_Club() {
-        return FK_Club;
-    }
-
-    public String getMembre_Nom() {
-        return Membre_Nom;
-    }
-
-    public String getMembre_Prenom() {
-        return Membre_Prenom;
-    }
-
     public String getMembre_DateNaissance() {
         return Membre_DateNaissance;
+    }
+
+    public String getNomClub() {
+        return nomClub;
+    }
+
+    public void setNomClub(String nomClub) {
+        this.nomClub = nomClub;
     }
 }

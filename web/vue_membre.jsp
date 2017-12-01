@@ -27,8 +27,8 @@
 <h1>Liste des membres</h1>
 
 <%
-    List<Membre> list= MembreBD.getAllRecords();
-    request.setAttribute("list",list);
+    List<Membre> membreList= MembreBD.getAllRecords();
+    request.setAttribute("membreList",membreList);
 %>
 <p>Ajouter une nouvelle entrée <a href="add_membre_form.jsp"><i class="fa">&#xf0fe;</i></a></p>
 
@@ -39,13 +39,18 @@
         <th>Prenom</th><th>Date</th><th>FK CLUB</th><th>Editer</th><th>Supprimer</th>
     </tr>
     </thead>
-    <c:forEach items="${list}" var="u">
-        <tr><td>${u.getPK_Membre()}</td><td>${u.getMembre_Nom()}</td>
-            <td>${u.getMembre_Prenom()}</td><td>${u.getMembre_DateNaissance()}</td><td>${u.getFK_Club()}</td>
+
+    <c:forEach items="${membreList}" var="c">
+
+        <tr><td>${c.getPK_Membre()}</td>
+            <td>${c.getMembre_Nom()}</td>
+            <td>${c.getMembre_Prenom()}</td>
+            <td>${c.getMembre_DateNaissance()}</td>
+            <td>${c.getNomClub()}</td>
 
 
-            <td><a href="edit_form_membre.jsp?pk_membre=${u.getPK_Membre()}"><i class="fa fa-edit"></i></a></td>
-            <td><a href="delete_membre.jsp?PK_Membre=${u.getPK_Membre()}"><i class="fa fa-trash-o"></i></a></td>
+            <td><a href="edit_form_membre.jsp?pk_membre=${c.getPK_Membre()}"><i class="fa fa-edit"></i></a></td>
+            <td><a href="delete_membre.jsp?PK_Membre=${c.getPK_Membre()}"><i class="fa fa-trash-o"></i></a></td>
 
 
            </tr>
