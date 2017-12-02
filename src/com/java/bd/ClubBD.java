@@ -65,34 +65,10 @@ public class ClubBD {
                     u.setClub_Nom(rs.getString("club_Nom"));
                     u.setClub_Type(rs.getString("club_Type"));
                     list.add(u);
-            /*
-
-            Connection conn=getConnection();
-            Statement state = conn.createStatement();
-
-            String query = "SELECT Membres.PK_Membre,Membres.Membre_Nom,Membres.Membre_Prenom,Membres.Membre_DateNaissance, Clubs.PK_Club as FK_Club,";
-            query += "Clubs.Club_Nom, Clubs.Club_Type FROM Membres inner join Clubs on(Membres.FK_Club=Clubs.PK_Club) ";
-            ResultSet result = state.executeQuery(query);
-            String nom = "";
-            String nom1 = "";
-
-            while(result.next()) {
-
-                nom = result.getString("Membres.Membre_Nom");
-                System.out.println(" mon nom est :" +nom);
-                nom1 = result.getString("Membre_Nom");
-                System.out.println(" mon nom1 est :" +nom1);
-
-            }
-
- */
-
                 }
         }catch(Exception e){System.out.println(e);}
         return list;
     }
-
-
     public static Club getRecordById(int PK_Club){
         Club u=null;
         try{
