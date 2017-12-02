@@ -77,18 +77,12 @@ public class MembreBD {
         try {
              Connection con = getConnection();
             Statement state = con.createStatement();
-            System.out.println("mon test n  "+state);
-            //PreparedStatement ps = con.prepareStatement("select * from Membres m, clubs c where m.FK_Club=c.PK_Club");
-
-            // intefration de on inner join.
 
             String query = "SELECT Membres.PK_Membre,Membres.Membre_Nom,Membres.Membre_Prenom,Membres.Membre_DateNaissance, Clubs.PK_Club as FK_Club,";
             query += "Clubs.Club_Nom, Clubs.Club_Type FROM Membres inner join Clubs on(Membres.FK_Club=Clubs.PK_Club) ";
             System.out.println("avant requette  ");
             ResultSet rs = state.executeQuery(query);
 
-            System.out.println("mon rs est egal null   "+rs);
-            //ResultSet rs = ps.executeQuery();
             while (rs.next()) {
 
                 Membre u = new Membre();
@@ -107,7 +101,6 @@ public class MembreBD {
         } catch (Exception e) {
             System.out.println(e);
         }
-
 
         return listMembre;
     }
