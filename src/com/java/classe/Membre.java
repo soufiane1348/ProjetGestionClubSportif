@@ -6,9 +6,7 @@ public class Membre {
     private String Membre_Nom;
     private String Membre_Prenom;
     private String Membre_DateNaissance;
-    private String nomClub; // ajout d'un attribu
-
-
+    private String nomClub;
 
 
     public int getPK_Membre() {

@@ -1,4 +1,6 @@
-header/*bandeau haut*/
+/*bandeau haut*/
+
+header
 {
     position: fixed;
     left: 0px;
@@ -8,6 +10,7 @@ header/*bandeau haut*/
     background-color: #EC8A01;
 
 }
+ /* Ajouter Club/Membre Consulter dans la page welcome */
 
 .haut a {
     text-align:center;
@@ -19,17 +22,7 @@ h3{
     text-align:center;
     font-size:22px;
 }
-/*
-.bas a {
-    text-decoration: none;
-    color: black;
-}
 
-h4 {
-    font-size:22px;
-    text-align:center;
-
-}*/
 .material-icons {
     padding-top: 5px;
     color:black;
@@ -39,7 +32,7 @@ h4 {
 
 }
 
-
+/* Image dans la page Welcome */
 img {
     border-radius: 50%;
     display: block;
@@ -47,10 +40,24 @@ img {
     margin-right: auto;
 }
 
+/* Bouton rouge pour ajouter */
+
 .button {
     padding:6px 0 6px 0;
     font:Bold 13px Arial;
     background:#d34836;
+    color:#fff;
+    width:90px;
+    border-radius:2px;
+    border:none;
+}
+
+/* Bouton bleu pour modifier */
+
+.button2 {
+    padding:6px 0 6px 0;
+    font:Bold 13px Arial;
+    background:#1801E8;
     color:#fff;
     width:90px;
     border-radius:2px;

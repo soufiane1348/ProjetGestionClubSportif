@@ -15,6 +15,9 @@ public class ClubBD {
         }catch(Exception e){System.out.println(e);}
         return con;
     }
+
+    /* Méthode pour ajouter nom club et type  */
+
     public static int save(Club u){
         int status=0;
         try{
@@ -27,6 +30,9 @@ public class ClubBD {
         }catch(Exception e){System.out.println(e);}
         return status;
     }
+
+    /* Méthode pour modifier le nom du club et le type */
+
     public static int update(Club u){
         int status=0;
         try{
@@ -40,6 +46,9 @@ public class ClubBD {
         }catch(Exception e){System.out.println(e);}
         return status;
     }
+
+    /* Suppression du Club */
+
     public static int delete(Club u){
         int status=0;
         try{
@@ -51,6 +60,9 @@ public class ClubBD {
 
         return status;
     }
+
+    /* Récupération des enregistrements */
+
     public static List<Club> getAllRecords(){
         List<Club> list=new ArrayList<Club>();
 
@@ -65,10 +77,15 @@ public class ClubBD {
                     u.setClub_Nom(rs.getString("club_Nom"));
                     u.setClub_Type(rs.getString("club_Type"));
                     list.add(u);
+
+
                 }
         }catch(Exception e){System.out.println(e);}
         return list;
     }
+
+    /* Récupération de l'ID enregistré */
+
     public static Club getRecordById(int PK_Club){
         Club u=null;
         try{

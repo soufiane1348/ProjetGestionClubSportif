@@ -2,10 +2,14 @@
 
 <html>
 <head>
+
+        <meta http-equiv="refresh" content="5" />
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports </title>
     <link href="css/tableau.css" type="text/css" rel="stylesheet">
-    <link href="css/listeclub.css" type="text/css" rel="stylesheet">
+    <link href="css/logo.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,6 +19,8 @@
     <header>
         <a href="logout.jsp"><i class="material-icons">&#xe897;</i></a>
         <a href="welcome.jsp"><i class="material-icons">&#xE88A;</i></a><br>
+        <a href="vue_membre.jsp:window.location.reload()"></a>
+
     </header>
 <body>
 
@@ -36,9 +42,10 @@
     <thead>
     <tr>
         <th>Id</th><th>Nom</th>
-        <th>Prenom</th><th>Date</th><th>FK CLUB</th><th>Editer</th><th>Supprimer</th>
+        <th>Prenom</th><th>Date</th><th>Club</th><th>Editer</th><th>Supprimer</th>
     </tr>
     </thead>
+
 
     <c:forEach items="${membreList}" var="c">
 

@@ -25,18 +25,7 @@ public class MembreBD {
         return con;
     }
 
-    public static int delete(Membre u){
-        int status=0;
-        try{
-            Connection con=getConnection();
-            PreparedStatement ps=con.prepareStatement("delete from membres where PK_Membre=?");
-            ps.setInt(1,u.getPK_Membre());
-            status=ps.executeUpdate();
-        }catch(Exception e){System.out.println(e);}
-
-        return status;
-    }
-
+    /* Méthode pour ajouter membre */
 
     public static int save(Membre u) {
         int status = 0;
@@ -55,6 +44,8 @@ public class MembreBD {
         return status;
     }
 
+    /* Méthode pour modifier les membres */
+
     public static int update(Membre u){
         int status=0;
         try{
@@ -71,6 +62,22 @@ public class MembreBD {
         return status;
     }
 
+    /* Suppresion de l'ID membre */
+
+    public static int delete(Membre u){
+        int status=0;
+        try{
+            Connection con=getConnection();
+            PreparedStatement ps=con.prepareStatement("delete from membres where PK_Membre=?");
+            ps.setInt(1,u.getPK_Membre());
+            status=ps.executeUpdate();
+        }catch(Exception e){System.out.println(e);}
+
+        return status;
+    }
+
+    /* Récupération de tous les entrées */
+
     public static List<Membre> getAllRecords() {
         List<Membre> listMembre = new ArrayList<Membre>();
 
@@ -78,10 +85,15 @@ public class MembreBD {
              Connection con = getConnection();
             Statement state = con.createStatement();
 
+
+            // Jointure table Membre et Club
+
             String query = "SELECT Membres.PK_Membre,Membres.Membre_Nom,Membres.Membre_Prenom,Membres.Membre_DateNaissance, Clubs.PK_Club as FK_Club,";
             query += "Clubs.Club_Nom, Clubs.Club_Type FROM Membres inner join Clubs on(Membres.FK_Club=Clubs.PK_Club) ";
-            System.out.println("avant requette  ");
+
             ResultSet rs = state.executeQuery(query);
+
+
 
             while (rs.next()) {
 
@@ -102,8 +114,11 @@ public class MembreBD {
             System.out.println(e);
         }
 
+
         return listMembre;
     }
+
+    /* Recupération de l'ID pour la modif */
 
     public static Membre getRecordById(int PK_Membre){
         Membre u=null;

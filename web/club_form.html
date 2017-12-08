@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Palais des Sports</title>
-    <link href="css/header.css" type="text/css" rel="stylesheet">
+    <link href="css/headerBouton.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
@@ -37,7 +37,17 @@
                 <option>Autres</option>
             </select>
         </td></tr>
-        <tr><td colspan="2"><input class="button" type="submit" value="Ajouter"/></td></tr>
+        <tr><td colspan="2"><input class="button" type="submit" value="Ajouter" onclick="Ajouter()"/></td></tr>
+
+
+        <script>
+
+            function Ajouter () {
+                open("vue_club.jsp");
+
+            }
+
+        </script>
     </table>
 </form>
 
